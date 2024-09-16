@@ -1,6 +1,6 @@
 # Toxic Admin Check
 Can you reach the administration panel?
-```nodejs
+```javascript
 const express = require('express')
 const app = express()
 const port = 3004
