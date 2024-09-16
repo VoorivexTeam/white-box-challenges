@@ -1,4 +1,4 @@
 # White-Box Challenges
-[Amirsafari](https://x.com/amirmsafari) and [I](https://x.com/yshahinzadeh) occasionally design whitebox challenges. We’ve decided to share the code and solutions here.
+We ([Amirsafari](https://x.com/amirmsafari) and [Yashar Shahinzadeh](https://x.com/yshahinzadeh)) occasionally design whitebox challenges. We’ve decided to share the code and solutions here, hope you find them useful.
 
 - [NodeJs] [Toxic Admin Check](/toxic-admin-check)
