@@ -5,3 +5,4 @@ We ([Amirsafari](https://x.com/amirmsafari) and [Yashar Shahinzadeh](https://x.c
 - [NodeJs] [Email Verification Bypass](/email-verification-bypass)
 - [Python] [FastAPI CSRF](/fastapi-csrf)
 - [NodeJs] [ORM Leaks Prisma](/orm-leaks-prisma)
+- [SelfXSS] [xPossible](/xPossible)
