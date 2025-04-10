@@ -4,3 +4,4 @@ We ([Amirsafari](https://x.com/amirmsafari) and [Yashar Shahinzadeh](https://x.c
 - [NodeJs] [Toxic Admin Check](/toxic-admin-check)
 - [NodeJs] [Email Verification Bypass](/email-verification-bypass)
 - [Python] [FastAPI CSRF](/fastapi-csrf)
+- [NodeJs] [ORM Leaks Prisma](/orm-leaks-prisma)
