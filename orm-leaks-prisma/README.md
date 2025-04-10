@@ -39,6 +39,18 @@ app.post('/reset-password', async (req, res) => {
 
 app.listen(3000, () => console.log('Server running on port 3000'));
 ```
+
+## Installation
+Run the following command to deploy the challenge:
+```bash
+docker compose up -d
+```
+
+## Rules and Objective
+1. Use `test@voorivex.com:test_token` for test.
+2. Try to reset `admin@voorivex.com` password.
+
+
 <details>
   <summary>Toggle to see the solution</summary>
 
