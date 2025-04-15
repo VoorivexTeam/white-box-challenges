@@ -83,23 +83,31 @@ if (isset($_SESSION['username'])) {
 
 // Handle login
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
-    
-    $stmt = $db->prepare('SELECT username, password, api_key FROM users WHERE username = :username');
-    $stmt->bindValue(':username', $username, SQLITE3_TEXT);
-    $result = $stmt->execute();
-    
-    if ($user = $result->fetchArray(SQLITE3_ASSOC)) {
-        if ($user['password'] === $password) {
-            $_SESSION['username'] = $user['username'];
-            $_SESSION['api_key'] = $user['api_key'];
-            header('Location: ' . $_SERVER['PHP_SELF']);
-            exit;
+    // Check if user is already logged in
+    if (isset($_SESSION['username'])) {
+        $error = 'You are already logged in';
+    } else {
+        $username = $_POST['username'] ?? '';
+        $password = $_POST['password'] ?? '';
+        
+        $stmt = $db->prepare('SELECT username, password, api_key FROM users WHERE username = :username');
+        $stmt->bindValue(':username', $username, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        
+        if ($user = $result->fetchArray(SQLITE3_ASSOC)) {
+            if ($user['password'] === $password) {
+                // Regenerate session ID to prevent session fixation
+                session_regenerate_id(true);
+                
+                $_SESSION['username'] = $user['username'];
+                $_SESSION['api_key'] = $user['api_key'];
+                header('Location: ' . $_SERVER['PHP_SELF']);
+                exit;
+            }
         }
+        
+        $error = 'Invalid username or password';
     }
-    
-    $error = 'Invalid username or password';
 }
 
 // Handle logout
