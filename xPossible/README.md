@@ -20,8 +20,7 @@ It means the SQLite database file cannot be written to because of incorrect file
 Run the following commands to fix it:
 
 ```bash
-sudo chown -R 33:33 ./src
-sudo chmod -R u+rw ./src
+sudo chmod -R 777 ./src
 ```
 
 
