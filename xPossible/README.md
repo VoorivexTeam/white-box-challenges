@@ -28,3 +28,11 @@ sudo chmod -R 777 ./src
 1. Use `user:pass` and `admin:h4rdPass` for login
 2. As user, send administrator a link and steal their API key
 3. Do not host the exploit code on the challenge domain
+
+
+
+<details>
+  <summary>Toggle to see the solution</summary>
+  
+  > Solution : [@AmirMSafari](https://x.com/AmirMSafari/status/1916915952723394769)
+</details>
