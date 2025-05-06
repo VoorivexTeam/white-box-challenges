@@ -1,0 +1,13 @@
+{
+    "name": "oauth2-express-example",
+    "version": "1.0.0",
+    "description": "Minimal OAuth2 example with Express.js",
+    "dependencies": {
+        "axios": "^1.6.0",
+        "body-parser": "^1.20.3",
+        "ejs": "^3.1.10",
+        "express": "^4.21.2",
+        "oauth2-server": "^3.1.1",
+        "simple-oauth2": "^5.0.0"
+    }
+}
