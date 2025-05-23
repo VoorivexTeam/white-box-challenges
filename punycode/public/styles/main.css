@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'GitLab Sans';
+    src: url('/fonts/GitLabSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "GitLab Sans", sans-serif;
+}

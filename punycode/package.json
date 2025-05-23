@@ -1,0 +1,25 @@
+{
+  "name": "gitlab_punycode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.14.0",
+    "nodemailer": "^7.0.3",
+    "passport": "^0.7.0",
+    "passport-gitlab2": "^5.0.0",
+    "sequelize": "^6.37.7"
+  }
+}
