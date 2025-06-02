@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('header', { title: "Sign Up" }) %>
+
+<body class="d-flex align-items-center justify-content-center vh-100 bg-light">
+    <div class="card p-4 shadow-sm" style="min-width: 300px; max-width: 400px; width: 100%;">
+        <h4 class="mb-3 text-center">Sign Up</h4>
+        
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-danger text-start">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof message !== 'undefined' && message) { %>
+            <div class="alert alert-success text-start">
+                <%= message %>
+            </div>
+        <% } %>
+
+        <form method="POST" action="/signup">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required />
+            </div>
+            <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </div>
+        </form>
+        <div class="text-center">
+            <a href="/">Already have an account? Login</a>
+        </div>
+    </div>
+</body>
+
+</html>

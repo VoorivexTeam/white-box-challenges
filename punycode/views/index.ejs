@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('header', { title: "Login" }) %>
+
+<body class="d-flex align-items-center justify-content-center vh-100 bg-light">
+    <div class="card p-4 shadow-sm" style="min-width: 300px; max-width: 400px; width: 100%;">
+        <h4 class="mb-3 text-center">Login</h4>
+        
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-danger text-start">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <% if (typeof message !== 'undefined' && message) { %>
+            <div class="alert alert-success text-start">
+                <%= message %>
+            </div>
+        <% } %>
+
+
+        <form method="POST" action="/login">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required />
+            </div>
+            <div class="d-grid mb-2">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            <div class="d-grid mb-3">
+                <a href="/auth/gitlab" class="btn btn-outline-dark">
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/144_Gitlab_logo_logos-512.png"
+                        alt="GitLab" width="20" class="me-2">
+                    Login with GitLab
+                </a>
+            </div>
+        </form>
+        <div class="text-center">
+            <a href="/forgot-password">Forgot password?</a> |
+            <a href="/signup">Sign up</a>
+        </div>
+    </div>
+</body>
+
+</html>
